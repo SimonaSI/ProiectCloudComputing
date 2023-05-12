@@ -1,0 +1,26 @@
+.card-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+ height: 650px!important;
+ max-width: 100%;
+}
+
+.card-container .info-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container .info-container div:first-child{
+    border-right: 1px solid #6e6e6e;
+    margin-right: 8px;
+    padding-right: 8px;
+}
+
+
+.nunta-form{
+    max-width: 500px;
+    width: 100%;
+}
