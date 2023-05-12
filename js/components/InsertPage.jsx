@@ -50,30 +50,30 @@ export default function InsertPage() {
                     <div className="mb-6">
 						<label htmlFor="capacitate"
 						       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Capacitate</label>
-						<textarea id="capacitate"
+						<input id="capacitate"
 						       className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-						       required rows="1"/>
+						       required />
 					</div>
                     <div className="mb-6">
 						<label htmlFor="contact"
 						       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Contact</label>
-						<textarea id="contact"
+						<input id="contact"
 						       className="  w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-						       required rows="1"/>
+						       required />
 					</div>
                     <div className="mb-6">
 						<label htmlFor="image"
 						       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Imagine</label>
 						<textarea id="image"
 						       className="w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-						       required rows="1"/>
+						       placeholder="Se adauga URL-ul imaginii" rows="1"/>
 					</div>
                     <div className="mb-6">
 						<label htmlFor="detalii"
 						       className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Detalii</label>
 						<textarea id="detalii"
 						       className=" w-full bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-						       required rows="1"/>
+						       placeholder="Se adauga un link catre site cu mai multe detalii" required rows="1"/>
 					</div>
 					<button type="submit"
 					        onClick={ insertRecord }
