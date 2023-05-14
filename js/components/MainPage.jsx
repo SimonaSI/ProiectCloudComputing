@@ -1,5 +1,6 @@
 // js/components/MainPage.jsx
 import {useEffect, useState} from "react";
+import Link from "next/link";
 
 export default function MainPage() {
 	const [records, setRecords] = useState([]);
@@ -39,6 +40,12 @@ export default function MainPage() {
 			<div className="container px-6 py-10 mx-auto">
 				<h5 className="w-[500px] mx-auto text-center text-6xl">NuntApp-etit</h5>
 				<p className="w-[1000px] mx-auto text-center mt-4 mb-4 text-3xl">O gustare delicioasă de organizare a nunții!</p>
+				<Link href={`/insert`}>
+				<button type="button"
+					className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900">
+				+ Adauga locatie
+				</button>
+				</Link> 
 				<div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 sm:grid-cols-2 xl:grid-cols-3 lg:grid-cols-3">
 					{records.map(record => (
 						<div
