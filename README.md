@@ -10,8 +10,6 @@ Link GitHub: https://github.com/SimonaSI/ProiectCloudComputing.git
 
 Introducere
 
-<img src="./poze/wallpaperflare.com_wallpaper.jpg" >
-
 Cloud computing reprezintă un model de furnizare a serviciilor de calcul, stocare, procesare și alte resurse IT printr-o rețea de servere conectate la internet. Acesta permite utilizatorilor să acceseze și să utilizeze aceste resurse la distanță, fără a fi necesară deținerea unor servere fizice proprii sau a altor infrastructuri IT costisitoare.
 Necesitatea cloud computingului în zilele noastre este determinată de o serie de factori. În primul rând, odată cu creșterea utilizării internetului, cantitatea de date procesate și stocate de către companii a crescut considerabil. În același timp, costurile de achiziție și întreținere a infrastructurii IT necesare pentru a stoca și procesa aceste date au devenit din ce în ce mai mari.
 Cloud computing-ul oferă o soluție mai eficientă și mai rentabilă pentru aceste probleme, permițând companiilor să-și externalizeze nevoile de stocare și procesare de date. Acesta poate fi utilizat pentru a oferi acces la resurse IT la nivel global, pentru a crește performanța aplicațiilor și a proceselor de afaceri, precum și pentru a crește flexibilitatea și scalabilitatea infrastructurii IT.
@@ -32,6 +30,8 @@ API-ul este utilizat pentru a permite comunicarea între serverul aplicației ș
 API-ul folosit in aplicatie este un API RESTful, care utilizeaza protocolul HTTP si metodele HTTP (GET, POST,PUT, DELETE) pentru a permite comunicarea intre client si server. Acest API se bazeaza pe Node.js si foloseste MongoDB ca baza de date.
 În fișierul "pages/api/records.js" s-a definit un endpoint care ascultă cereri HTTP Și decide cum să proceseze aceste cereri în functție de metoda HTTP și de conținutul cererii. De exemplu, dacă primește o cerere HTTP GET faără niciun parametru, endpoint-ul va chema funcția "getRecords" pentru a returna toate înregistrările din colecția "records" din baza de date.
 
+<img src="./poze/1.png" >
+
 Mai exact, API-ul expune următoarele funcții pentru a permite interacțiunea cu colecția "records":
 • getRecords: returnează toate înregistrările din colecția "records";
 • getRecord: returnează o înregistrare specifică din colecția "records", identificată după id-ul său;
@@ -49,6 +49,8 @@ Fișierul "js/utils/apiMethods.js" conține funcții pentru trimiterea de răspu
 • "sendUnauthorized" pentru a trimite un raspuns cu codul de stare 401 Unauthorized și un mesaj de eroare;
 • "sendMethodNotAllowed" pentru a trimite un raspuns cu codul de stare 405 Method Not Allowed și un mesaj de eroare.
 
+<img src="./poze/2.png" >
+
 Flux de date
 
 S-a dezvoltat o aplicație web, NuntApp-etit, care oferă utilizatorilor informații despre locații pentru evenimente precum nunți, cununii sau botezuri.
@@ -61,18 +63,30 @@ S-a dezvoltat o aplicație web, NuntApp-etit, care oferă utilizatorilor informa
 5. Clientul primește răspunsul HTTP și se afișează datele pe interfața utilizatorului, sau va trimite o altă cerere;
 6. Acest proces se poate repeta de mai multe ori, în funcție de necesitățile aplicației și de acțiunile utilizatorilor.
 
+<img src="./poze/3.png" >
+
 Exemple de request/response
 
 Pentru a testa API-ul nostru, am folosit platforma Postman. Aceasta ne-a permis să efectuăm teste unitare și de integrare pentru a ne asigura că API-ul nostru funcționează corect și în conformitate cu specificațiile.
 Un prim exemplu de request pe care îl putem vizualiza este acela pentru obținerea tuturor înregistrărilor. Pentru aceasta ne vom folosi de ruta http://localhost:3000/api/records, si nu vom adăuga niciun body. Răspunsul va fi următorul:
 
+<img src="./poze/4.png" >
+
 Un alt request pe care îl putem face este acela de a extrage doar o locație folosind id-ul. Pentru aceasta vom folosi ruta http://localhost:3000/api/records si vom adăuga parametrul id cu valoarea id-ului căutat. Răăspunsul este următorul:
+
+<img src="./poze/5.png" >
 
 Pentru a efectua un request de tip DELETE se va folosi aceeași ruta ca cea de la get by id, doar că se va alege metoda DELETE. Rezultatul este următorul:
 
+<img src="./poze/6.png" >
+
 Dacă încercăm să rulăm request-ul de get by id, vom observa că locația nu mai există și nu se va întoarce niciun răspuns.
 
+<img src="./poze/7.png" >
+
 De asemenea, vom realiza și un tip de request POST. Acesta va folosi ruta http://localhost:3000/api/records și îi vom da un body cu un json format din atributele necesare. Mai jos se observă conținutul json-ului și rezultatul întors:
+
+<img src="./poze/8.png" >
 
 Metode HTTP
 
@@ -82,14 +96,22 @@ Metodele HTTP (Hypertext Transfer Protocol) sunt utilizate pentru a comunica cu 
 • PUT - utilizată pentru a actualiza o resursă existentă pe server. Metoda PUT poate fi utilizată pentru a actualiza date sau fișiere existente pe server.
 • DELETE - utilizată pentru a șterge o resursă de pe server. Aceasta poate fi utilizată pentru a șterge un fișier sau un înregistrare dintr-o bază de date.
 
+<img src="./poze/9.png" >
+
 Autentificare și autorizare servicii utilizate
 
 Am creat un cont pe MongoDB Atlas și am utilizat link -ul de conectare generat pentru a mă conecta la baza de date stocată în MongoDB Compass.
 MongoDB Atlas este o platformă de gestionare a bazelor de date MongoDB în cloud și oferă o interfață web pentru a configura și gestiona bazele de date, precum și un set de instrumente pentru a le monitoriza și a le securiza. După crearea contului am adăugat un proiect nou, un user și o parolă pe care le-am salvat.
 
+<img src="./poze/10.png" >
+
 MongoDB Compass este o aplicație desktop care oferă o interfață grafică pentru interogarea, vizualizarea și administrarea bazelor de date MongoDB. Pentru a mă conecta la aceasta, am adăugat o nouă conexiune folosind un string de conexiune. În string-ul de conexiune se va înlocui parola cu cea generată anterior.
 
+<img src="./poze/11.png" >
+
 Odată ce s-a creat conexiunea se pot adăuga date in baza de date.
+
+<img src="./poze/12.png" >
 
 Descriere tehnologii
 
@@ -110,9 +132,15 @@ Aplicație
 NuntApp-etit este o aplicație web care vine în ajutorul cuplurilor care își doresc să-și organizeze nunta sau alt eveniment important din viața lor. Aceasta are două pagini principale: pagina de afișare a locațiilor disponibile și pagina de inserare a unei noi locații.
 Pe prima pagină a aplicației sunt afișate mai multe locații disponibile pentru organizarea nunții, fiecare locație fiind prezentată cu un titlu, o descriere, o imagine și alte informații relevante pentru organizarea unui eveniment de acest gen. De asemenea, fiecare locație este dotată cu două butoane: un buton de detalii și un buton de ștergere. Butoanele sunt concepute astfel încât să ajute utilizatorii să interacționeze cu locațiile în mod intuitiv și facil.
 
+<img src="./poze/13.png" >
+
 Dacă utilizatorul dorește să afle mai multe informații despre o anumită locație, poate apăsa butonul de detalii, iar aplicația îl va redirecționa către site-ul de unde au fost extrase toate locațiile existente în baza mea de date, unde sunt afișate mai multe informații despre locația respectivă, precum și o galerie de imagini. Această pagină este concepută astfel încât utilizatorul să poată lua o decizie mai informată în ceea ce privește alegerea locației pentru nunta lor.
 
+<img src="./poze/14.png" >
+
 În cazul în care utilizatorul dorește să adauge o locație pentru a ajuta alți utilizatori în găsirea unei locații potrivite, acesta poate folosi butonul "Adaugă locație" pentru a naviga către a doua pagină a aplicației. Pe această pagină se află un formular de inserare a unei noi locații, cu toate câmpurile necesare pentru a introduce informațiile despre locația nouă, precum titlu, descriere, capacitate, contact și link-ul către pagina oficială a locației. După ce utilizatorul completează toate câmpurile și apasă butonul de submit, aplicația va adăuga automat noua locație în baza de date și va redirecționa utilizatorul către pagina de afișare a locațiilor disponibile, unde va putea vedea și locația nouă adăugată în listă. Câmpul pentru inserarea unei imagini reprezintă un string în care se afla adresa URL a fotografiei, iar câmpul Detalii reprezintă un link de redirecționare către pagina oficială a locației.
+
+<img src="./poze/15.png" >
 
 NuntApp-etit este o aplicație intuitivă și ușor de folosit, concepută pentru a ajuta cuplurile să-și organizeze nunta într-un mod simplu și eficient.
 
