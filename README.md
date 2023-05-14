@@ -4,9 +4,9 @@ Proiect Cloud Computing
 
 Stoica Simona-Ionela, SIMPRE, an 1, grupa 1121
 
-Link Youtube: https://youtu.be/B2KqXhfTpwo
-Link Vercel: https://proiect-cloud-computing-9mok-8d4e5lkkj-simonasi.vercel.app/
-Link GitHub: https://github.com/SimonaSI/ProiectCloudComputing.git
+- Link Youtube: https://youtu.be/B2KqXhfTpwo
+- Link Vercel: https://proiect-cloud-computing-9mok-8d4e5lkkj-simonasi.vercel.app/
+- Link GitHub: https://github.com/SimonaSI/ProiectCloudComputing.git
 
 Introducere
 
